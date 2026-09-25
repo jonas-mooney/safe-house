@@ -1,0 +1,37 @@
+#include <iostream>
+#include "math_utils.h"
+#include "defcon_tracker.h"
+#include <chrono>
+#include "Logger.h"
+
+int main() {
+    
+    Logger statusLogger(std::chrono::seconds(5)); // Configurable interval
+    
+    auto lastPrintTime = std::chrono::steady_clock::now();
+    
+    std::cout << "Running main loop... Press Ctrl+C to exit.\n";
+    
+    while (true) {
+        auto currentTime = std::chrono::steady_clock::now();
+        
+        // statusLogger.update(static_cast<uint8_t>(homeSystem.getState()));
+        statusLogger.update(static_cast<uint8_t>(88));
+        
+    }
+    
+    return 0;
+}
+
+
+
+// int x = 10;
+// int y = 4;
+
+// std::cout << "Sum: " << MathUtils::add(x, y) << "\n";
+// std::cout << "Difference: " << MathUtils::subtract(x, y) << "\n";
+// std::cout << "Average: " << MathUtils::average(x, y) << "\n";
+
+// DefconTracker tracker1;
+// tracker1.setDefconNumber(24);
+// std::cout << "Defcon number: " << tracker1.getDefconNumber() << "\n";
