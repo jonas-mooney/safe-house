@@ -3,20 +3,22 @@
 #include "defcon_tracker.h"
 #include <chrono>
 #include "Logger.h"
+#include "secure_states.h"
 
 int main() {
+    std::cout << "Running main loop... Press Ctrl+C to exit.\n";
     
     Logger statusLogger(std::chrono::seconds(5)); // Configurable interval
-    
     auto lastPrintTime = std::chrono::steady_clock::now();
-    
-    std::cout << "Running main loop... Press Ctrl+C to exit.\n";
+
+    SecurityState status = SecurityState::ArmedHome;
     
     while (true) {
         auto currentTime = std::chrono::steady_clock::now();
         
         // statusLogger.update(static_cast<uint8_t>(homeSystem.getState()));
-        statusLogger.update(static_cast<uint8_t>(88));
+        // statusLogger.update(static_cast<uint8_t>(88));
+        statusLogger.update(static_cast<uint8_t>(status));
         
     }
     
