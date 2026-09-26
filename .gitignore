@@ -1,0 +1,17 @@
+*.exe
+/build
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.vcxproj.user
+
+# Visual Studio
+.vs/
+
+# Kilo local config
+.kilo/
