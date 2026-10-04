@@ -1,9 +1,7 @@
 #include <iostream>
-#include "math_utils.h"
-#include "defcon_tracker.h"
 #include <chrono>
-#include "Logger.h"
-#include "secure_states.h"
+#include "Logger.hpp"
+#include "secure_states.hpp"
 
 int main() {
     std::cout << "Running main loop... Press Ctrl+C to exit.\n";

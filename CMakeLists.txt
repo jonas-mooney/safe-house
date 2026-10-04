@@ -7,9 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(runmain
     src/main.cpp
     src/Logger.cpp
-    src/defcon_tracker.cpp
     src/secure_states.cpp
-    src/math_utils.cpp
     src/safe_home.cpp
 )
 

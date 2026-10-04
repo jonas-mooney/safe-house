@@ -1,4 +1,4 @@
-#include "safe_home.h"
+#include "safe_home.hpp"
 
 // New long-running process
 // New safe home object created with default state
